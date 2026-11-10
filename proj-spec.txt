@@ -1,0 +1,69 @@
+1. Implementação (em Java)
+Desenvolva um simulador contendo as seguintes entidades:
+
+processo.Processo
+
+ID único.
+
+QuantidadeInstrucoes: número de instruções restantes.
+
+Prioridade: valor entre 1 e 5 (5 representa a maior prioridade).
+
+A cada execução na CPU, uma instrução deverá ser decrementada. O processo termina quando esse valor chegar a zero.
+
+GeradorDeProcessos
+
+Deverá gerar novos processos periodicamente, com ID incremental, quantidade aleatória de instruções entre 10 e 50 e prioridade aleatória entre 1 e 5.
+
+escalonador.Escalonador
+
+Responsável por selecionar o próximo processo conforme o algoritmo configurado:
+
+FCFS: ordem de chegada.
+
+SJF: menor quantidade de instruções primeiro.
+
+Round Robin: execução por quantum configurável, retornando processos não finalizados ao final da fila.
+
+Prioridade: maior prioridade primeiro (menor valor numérico).
+
+Considere FCFS, SJF e Prioridade não preemptivos.
+
+CPU
+
+Deverá executar continuamente os processos, decrementando uma instrução por iteração e solicitando outro processo ao escalonador quando necessário. Caso não existam processos disponíveis, deverá aguardar.
+
+Ponha um sleep para cada ciclo, caso ache interessante, para acompanhar sua execução.
+
+2. Testes
+Execute os quatro algoritmos utilizando a mesma sequência de processos, com as mesmas características e instantes de chegada.
+
+Para o Round Robin, teste os valores de quantum 2, 5 e 10.
+
+O simulador deverá exibir os processos em execução, aguardando e finalizados.
+
+3. Relatório comparativo
+Ao final, entregue um relatório contendo:
+
+Implementação: breve descrição das entidades e dos algoritmos.
+
+Resultados: tabela comparativa com a ordem de execução, tempo médio de espera e quantidade de trocas de processos.
+
+Análise: responda:
+
+Qual algoritmo apresentou o menor tempo médio de espera?
+
+Como o quantum influenciou o Round Robin?
+
+Qual algoritmo realizou mais trocas de processos?
+
+Quais as vantagens e desvantagens de cada algoritmo?
+
+Qual algoritmo seria mais adequado para sistemas interativos? Por quê?
+
+Conclusão: apresente as principais diferenças observadas entre os algoritmos.
+
+4. Entrega
+Código-fonte do simulador.
+
+Relatório comparativo com resultados e conclusões.
