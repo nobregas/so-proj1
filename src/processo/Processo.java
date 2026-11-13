@@ -28,6 +28,14 @@ public class Processo {
 
     }
 
+    public Processo(Processo outro) {
+        this.id = outro.id;
+        this.quatidadeInstrucoes = outro.quatidadeInstrucoes;
+        this.prioridade = outro.prioridade;
+        this.instanteChegada = outro.instanteChegada;
+        this.instrucoesRestantes = outro.quatidadeInstrucoes;
+    }
+
     public int getId() {
         return id;
     }
@@ -101,5 +109,10 @@ public class Processo {
     @Override
     public int hashCode() {
         return Objects.hash(id);
+    }
+
+    @Override
+    public String toString() {
+        return "P" + id;
     }
 }

@@ -32,4 +32,8 @@ public abstract class Escalonador {
     public List<Processo> getConcluidos() {
         return concluidos;
     }
+
+    public Queue<Processo> getAProcessar() {
+        return aProcessar;
+    }
 }
